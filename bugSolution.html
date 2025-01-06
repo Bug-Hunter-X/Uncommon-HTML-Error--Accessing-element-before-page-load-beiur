@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    //Correct solution: use setTimeout to make sure the element is loaded 
+    setTimeout(function(){
+        let divElement = document.getElementById("myDiv");
+        divElement.innerHTML = "This text replaces the original text."; 
+    }, 0);
+
+  </script>
+</body>
+</html>
