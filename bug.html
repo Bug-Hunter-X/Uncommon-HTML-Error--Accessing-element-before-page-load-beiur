@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    //Attempting to access an element before it is fully loaded 
+    let divElement = document.getElementById("myDiv");
+    divElement.innerHTML = "This text replaces the original text."; 
+    
+    //This will work correctly, because the HTML element is fully loaded
+    setTimeout(function(){
+        document.getElementById("myDiv").innerHTML = "This text will replace the previous one";
+    }, 2000);
+  </script>
+</body>
+</html>
